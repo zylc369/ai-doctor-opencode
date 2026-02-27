@@ -1,2 +1,5 @@
-.DS_Store
 /notes
+
+# macOS extended attributes
+._*
+.DS_Store
