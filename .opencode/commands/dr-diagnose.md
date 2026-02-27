@@ -30,8 +30,8 @@ This command runs through 6 phases:
 ### 0. OBTAIN PATIENT'S NAME
 1. **If a patient name is provided via `$1`, use it.**
 2. Otherwise, attempt to retrieve the patient name from the current session:
-  a. If a name is retrieved, use the question tool to verify its correctness and also allow the user to input a patient name.
-  b. If no name is retrieved from the session, require users to input the patient's name.
+    - If a name is retrieved, use the question tool to verify its correctness and also allow the user to input a patient name.
+    - If no name is retrieved from the session, require users to input the patient's name.
 
 **Always prioritize the patient name entered by the user.**
 
