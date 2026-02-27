@@ -70,9 +70,9 @@ If emergency symptoms are detected (chest pain + SOB, sudden severe headache, et
 - **Running Notes:** `@notes/[patient name]-PatientNote-[timestamp].md` - Updated throughout session
 - **Final Report:** `@notes/[patient name]-report-[timestamp].md` - SOAP format
 
-**timestamp format**: `YYYYMMDD_HHMMSS_SSS`. **YYYYMMDD**: year, month, day. **HHMMSS**: hour, minute, second. **SSS**: millisecond.
+**timestamp format**: `yyyyMMdd_HHmmss_SSS`. **yyyyMMdd**: year, month, day. **HHmmss**: hour, minute, second. **SSS**: millisecond.
 
-**IMPORTANT**: Create a new output file for each diagnosis.
+**IMPORTANT**: Create new output files for each diagnosis.
 
 ## COMPLETION
 
