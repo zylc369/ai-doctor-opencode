@@ -16,13 +16,14 @@ Start the full diagnostic workflow using OpenCode's ralph-loop mechanism.
 
 **Note:** All output—including questions, analysis, and SOAP reports—uses the language of the reported symptom(for example, If the symptom is described in Chinese, all output must be in Chinese).
 
-This command runs through 5 phases:
+This command runs through 6 phases:
 
-1. **Interview** - Use question tool for comprehensive medical intake
-2. **Research** - websearch_web_search_exa for literature, guidelines, treatment protocols
-3. **Differential** - Analyze findings to determine diagnosis
-4. **Treatment** - Develop research-backed action plan
-5. **Report** - Generate SOAP format documentation
+1. **Patient's Name** - Obtain the patient's name for both the running notes and the patient notes
+2. **Interview** - Use question tool for comprehensive medical intake
+3. **Research** - websearch_web_search_exa for literature, guidelines, treatment protocols
+4. **Differential** - Analyze findings to determine diagnosis
+5. **Treatment** - Develop research-backed action plan
+6. **Report** - Generate SOAP format documentation
 
 ## CRITICAL RULES
 
@@ -50,7 +51,7 @@ Write findings to the patient notes file after each phase. Use timestamps for al
 ### 4. READ EXISTING PATIENT HISTORY
 If patient notes exist, READ them first to understand previous sessions before beginning.
 
-**patient note file name format**: `[patient name]-PatientNote-[timestamp].md`.
+**patient notes file name format**: `[patient name]-PatientNote-[timestamp].md`.
 
 ### 5. USE websearch_web_search_exa FOR RESEARCH
 Search for medical literature, guidelines, and treatment protocols. Use inline citations.
