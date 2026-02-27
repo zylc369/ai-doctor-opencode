@@ -32,22 +32,26 @@
 
 ## 安装方法
 
-1. **克隆仓库**
+### 1. **克隆仓库**
 
 ```bash
 git clone https://github.com/yourusername/ai-doctor-opencode.git
 cd ai-doctor-opencode
 ```
 
-2. **全局安装（可选）**
+
+
+### 2. **全局安装（可选）**
 
 将`.opencode/commands/dr-diagnose.md`拷贝到`~/.config/opencode/commands/dr-diagnose.md`。
 
 **快捷命令：**`cp .opencode/commands/dr-diagnose.md ~/.config/opencode/commands/dr-diagnose.md`。
 
-3. **在 OpenCode 中加载项目**
 
-将项目目录添加到 OpenCode 的工作空间中。
+
+如果不想全局安装，可以直接在`ai-doctor-opencode`目录下启动opencode，进而快速体验。
+
+
 
 ## 使用方法
 
