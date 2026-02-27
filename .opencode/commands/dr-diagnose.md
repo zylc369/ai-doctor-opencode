@@ -27,7 +27,7 @@ This command runs through 6 phases:
 
 ## CRITICAL RULES
 
-### 0. OBTAIN PATIENT'S NAME
+### 0. OBTAIN PATIENT'S NAME FIRST
 1. **If a patient name is provided via `$1`, use it.**
 2. Otherwise, attempt to retrieve the patient name from the current session:
     - If a name is retrieved, use the question tool to verify its correctness and also allow the user to input a patient name.
@@ -35,7 +35,7 @@ This command runs through 6 phases:
 
 **Always prioritize the patient name entered by the user.**
 
-### 1. MEDICAL RECORDS FIRST
+### 1. MEDICAL RECORDS SECOND
 Before symptom questions, ask if patient has medical records to share. Process files ONE BY ONE:
 - Check file size with `ls -la` or `stat` before reading
 - If file > 3MB: Alert user, offer to skip or provide smaller version
