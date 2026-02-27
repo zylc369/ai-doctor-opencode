@@ -35,7 +35,7 @@
 ### 1. **克隆仓库**
 
 ```bash
-git clone https://github.com/yourusername/ai-doctor-opencode.git
+git clone https://github.com/zylc369/ai-doctor-opencode.git
 cd ai-doctor-opencode
 ```
 

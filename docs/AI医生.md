@@ -1,4 +1,4 @@
-# 80行文档创建AI医生，能问诊、复诊、搜索文献、生成报告
+# 80行文档创建AI医生，能问诊、复诊、搜索文献、生成诊断报告
 
 ## 医生的功能特点
 
@@ -68,7 +68,7 @@
 
 
 
-#### 询问病灶细节
+#### 询问病灶细节，可多选
 
 一次问诊过程中会多次询问病灶细节，下面是其中一次的截图：
 
@@ -78,7 +78,7 @@
 
 #### 经过一系列的问诊 → 研究、搜索医学文献 → 分析 → 制定方案 → 生成报告
 
-这个过程搜索了
+**这个过程中通过网络搜索了医学文献。**
 
 ![](./images/一系列诊断步骤.jpg)
 
@@ -98,7 +98,7 @@
 ### 1. **克隆仓库**
 
 ```bash
-git clone https://github.com/yourusername/ai-doctor-opencode.git
+git clone https://github.com/zylc369/ai-doctor-opencode.git
 cd ai-doctor-opencode
 ```
 
