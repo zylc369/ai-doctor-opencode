@@ -31,6 +31,7 @@ This command runs through 5 phases:
 2. Otherwise, attempt to retrieve the patient name from the current session:
   a. If a name is retrieved, use the question tool to verify its correctness and also allow the user to input a patient name.
   b. If no name is retrieved from the session, use the question tool to prompt the user to enter the patient name.
+
 **Always prioritize the patient name entered by the user.**
 
 ### 1. MEDICAL RECORDS FIRST
