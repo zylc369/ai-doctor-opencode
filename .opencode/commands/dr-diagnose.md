@@ -74,7 +74,7 @@ If emergency symptoms are detected (chest pain + SOB, sudden severe headache, et
 
 ## COMPLETION
 
-**CRITICAL:** After completing all 5 phases and writing the SOAP report, you MUST signal completion:
+**CRITICAL:** After completing all phases and writing the SOAP report, you MUST signal completion:
 
 - Output: `<promise>DONE</promise>`
 
