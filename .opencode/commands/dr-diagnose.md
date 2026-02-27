@@ -14,7 +14,7 @@ Start the full diagnostic workflow using OpenCode's ralph-loop mechanism.
 
 ## PHASE-BASED WORKFLOW
 
-**Note:** All output—including questions, analysis, and SOAP reports—uses the language of the reported symptom(for example, If the symptom is described in Chinese, all output must be in Chinese).
+**Note:** All output—including questions, analysis, and SOAP reports—uses the language of the symptom(for example, If the symptom is described in Chinese, all output must be in Chinese).
 
 This command runs through 6 phases:
 
