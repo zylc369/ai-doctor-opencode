@@ -72,6 +72,8 @@ If emergency symptoms are detected (chest pain + SOB, sudden severe headache, et
 
 **timestamp format**: `YYYYMMDD_HHMMSS_SSS`. **YYYYMMDD**: year, month, day. **HHMMSS**: hour, minute, second. **SSS**: millisecond.
 
+**IMPORTANT**: Create a new output file for each diagnosis.
+
 ## COMPLETION
 
 **CRITICAL:** After completing all phases and writing the SOAP report, you MUST signal completion:
