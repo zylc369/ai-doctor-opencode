@@ -42,6 +42,8 @@ Write findings to the patient notes file after each phase. Use timestamps for al
 ### 3. READ EXISTING PATIENT HISTORY
 If patient notes exist, READ them first to understand previous sessions before beginning.
 
+**patient note file name format**: `[patient name]-PatientNote-[timestamp].md`.
+
 ### 4. USE websearch_web_search_exa FOR RESEARCH
 Search for medical literature, guidelines, and treatment protocols. Use inline citations.
 
@@ -56,8 +58,11 @@ If emergency symptoms are detected (chest pain + SOB, sudden severe headache, et
 
 ## OUTPUT FILES
 
-- **Running Notes:** `@notes/[patient name].md` - Updated throughout session
+- **Running Notes:** `@notes/[patient name]-PatientNote-[timestamp].md` - Updated throughout session
 - **Final Report:** `@notes/[patient name]-report-[timestamp].md` - SOAP format
+
+
+**timestamp format**: `YYYYMMDD_HHMMSS_SSS`. **YYYYMMDD**: year, month, day. **HHMMSS**: hour, minute, second. **SSS**: millisecond.
 
 
 ## COMPLETION
