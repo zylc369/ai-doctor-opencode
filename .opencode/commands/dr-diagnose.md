@@ -10,7 +10,7 @@ Start the full diagnostic workflow using OpenCode's ralph-loop mechanism.
 
 ## Parameter Description
 1. `$1`: The symptom to be diagnosed. This parameter is required. If not provided, the command execution will be terminated.
-2. `$2`: The patient's name. This parameter is optional. If not provided, a random patient name will be generated.
+2. `$2`: The patient's name. This parameter is optional.
 
 ## PHASE-BASED WORKFLOW
 
@@ -26,34 +26,41 @@ This command runs through 5 phases:
 
 ## CRITICAL RULES
 
-### 0. MEDICAL RECORDS FIRST
+### 0. OBTAIN PATIENT'S NAME
+1. **If a patient name is provided via `$1`, use it.**
+2. Otherwise, attempt to retrieve the patient name from the current session:
+  a. If a name is retrieved, use the question tool to verify its correctness and also allow the user to input a patient name.
+  b. If no name is retrieved from the session, use the question tool to prompt the user to enter the patient name.
+**Always prioritize the patient name entered by the user.**
+
+### 1. MEDICAL RECORDS FIRST
 Before symptom questions, ask if patient has medical records to share. Process files ONE BY ONE:
 - Check file size with `ls -la` or `stat` before reading
 - If file > 3MB: Alert user, offer to skip or provide smaller version
 - Suggest Adobe Acrobat to split large PDFs
 - Never let one bad file crash the workflow
 
-### 1. USE question TOOL FOR ALL INTERVIEW QUESTIONS
+### 2. USE question TOOL FOR ALL INTERVIEW QUESTIONS
 You MUST use the question tool for every interview question. Do NOT output questions as plain text.
 
-### 2. MAINTAIN RUNNING NOTES
+### 3. MAINTAIN RUNNING NOTES
 Write findings to the patient notes file after each phase. Use timestamps for all entries.
 
-### 3. READ EXISTING PATIENT HISTORY
+### 4. READ EXISTING PATIENT HISTORY
 If patient notes exist, READ them first to understand previous sessions before beginning.
 
 **patient note file name format**: `[patient name]-PatientNote-[timestamp].md`.
 
-### 4. USE websearch_web_search_exa FOR RESEARCH
+### 5. USE websearch_web_search_exa FOR RESEARCH
 Search for medical literature, guidelines, and treatment protocols. Use inline citations.
 
-### 5. FOLLOW PHASE ORDER
+### 6. FOLLOW PHASE ORDER
 Complete each phase fully before moving to the next. Announce phase transitions.
 
-### 6. MEDICAL DISCLAIMER
+### 7. MEDICAL DISCLAIMER
 This is an AI-assisted tool. Always remind patients this is not a substitute for professional medical advice. Remind them to redact sensitive information.
 
-### 7. FLAG RED FLAGS
+### 8. FLAG RED FLAGS
 If emergency symptoms are detected (chest pain + SOB, sudden severe headache, etc.), flag them prominently but continue the workflow.
 
 ## OUTPUT FILES
@@ -61,9 +68,7 @@ If emergency symptoms are detected (chest pain + SOB, sudden severe headache, et
 - **Running Notes:** `@notes/[patient name]-PatientNote-[timestamp].md` - Updated throughout session
 - **Final Report:** `@notes/[patient name]-report-[timestamp].md` - SOAP format
 
-
 **timestamp format**: `YYYYMMDD_HHMMSS_SSS`. **YYYYMMDD**: year, month, day. **HHMMSS**: hour, minute, second. **SSS**: millisecond.
-
 
 ## COMPLETION
 
