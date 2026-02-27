@@ -28,10 +28,11 @@ This command runs through 6 phases:
 ## CRITICAL RULES
 
 ### 0. OBTAIN PATIENT'S NAME FIRST
-1. **If a patient name is provided via `$1`, use it.**
+1. **If a patient name is provided via `$2`, use it.**
 2. Otherwise, attempt to retrieve the patient name from the current session:
-    - If a name is retrieved, use the question tool to verify its correctness and also allow the user to input a patient name.
-    - If no name is retrieved from the session, require users to input the patient's name.
+    - Search for existing patient notes in `notes/` directory to find candidate names
+    - If candidates found: Use the question tool to verify its correctness and also allow the user to input a patient name.
+    - If no candidates: NEVER use the question tool in this step. MUST require users to input the patient's name without other information and tips.
 
 **Always prioritize the patient name entered by the user.**
 
