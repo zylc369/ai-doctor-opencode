@@ -32,7 +32,7 @@ This command runs through 6 phases:
 2. Otherwise:
     - Please extract the **patient name** from filenames in the `note` directory that follow the format `[patient name]-PatientNote-[timestamp].md`.
     - **If patient names found**: Use question tool with options = candidate names (question tool auto-adds "Type your own answer" for new name input).
-    - **If no patient names**: NEVER use the question tool in this step. Please directly output a message like "Please enter the patient's name" without other information and tips.
+    - **If no patient names**: NEVER use the question tool in this step. Please directly output a message like "Please enter the patient's name" without other information and tips, use language of the symptom.
 
 **Always prioritize the patient name entered by the user.**
 
